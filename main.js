@@ -1,4 +1,4 @@
-//! =====================================================
+
 
 const stringInputForm = document.querySelector("#string-saver-form");
 const stringInput = document.querySelector("#string-saver-input");
@@ -29,6 +29,7 @@ if (savedStrValue === null) {
 	savedStr.innerText = "Nothing stored in local storage.";
 } else {
 	savedStr.innerText = savedStrValue;
+	console.log(savedStrValue);
 }
 
 //! When the form is submitted, save something to local storage=====================
@@ -73,10 +74,8 @@ You can convert an array to a string with JSON.stringify() and you can convert a
 
 
 
-//? On page load, display the logged in user's username
 const itemList = localStorage.getItem("lists");
 
-//! JSON.parse(localStorage.lists)[0]["listInputValue"]
 if (itemList === null) {
 	list.innerHTML = "List is Empty";
 } else {
@@ -90,17 +89,14 @@ if (itemList === null) {
 	}
 }
 
-//? When the create account form is submitted
 listForm.addEventListener("submit", function (event) {
 	event.preventDefault();
 	listInputValue = listInput.value;
 
-	//? Make a new user with the text inputs' values
+	
 	const newlistItem = {
 		listInputValue,
 	};
-
-	//? Add the new user to our saved user array
 	let lists = localStorage.getItem("lists");
 
 	if (lists === null) {

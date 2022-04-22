@@ -24,9 +24,9 @@ To do this, you'll need to make it so that upon page load, you retrieve a number
 
 ## Challenge 3: List builder
 
-Your third challenge is to allow the user to store a list of strings.
-
-To do this, once again create a text input and a button in HTML. Additionally, add an ordered list below the input and button. 
+Y
+To do this, our third challenge is to allow the user to store a list of strings.
+once again create a text input and a button in HTML. Additionally, add an ordered list below the input and button. 
 
 From here, add JS so that every time the user clicks the button, a new list item is added to ordered list that contains whatever the value of the text input was.
 
